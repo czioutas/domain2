@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "8fdcc811-f6fc-495d-b417-e82afa6550a5",
+		"name": "ElectricityCounter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:60409/api/v1/counter?id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:60409/api/v1/counter?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60409",
+					"path": [
+						"api",
+						"v1",
+						"counter"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:60409/api/v1/countercallback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "counter_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "24",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:60409/api/v1/countercallback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60409",
+					"path": [
+						"api",
+						"v1",
+						"countercallback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:60409/api/v1/countercallback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "counter_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10000.123",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:60409/api/v1/countercallback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60409",
+					"path": [
+						"api",
+						"v1",
+						"countercallback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:60409/api/v1/consumptionreport?duration=24",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:60409/api/v1/consumptionreport?duration=24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60409",
+					"path": [
+						"api",
+						"v1",
+						"consumptionreport"
+					],
+					"query": [
+						{
+							"key": "duration",
+							"value": "24"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
